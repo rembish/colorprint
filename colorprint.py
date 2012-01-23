@@ -1,10 +1,47 @@
 # -*- encoding: utf-8 -*-
+"""
+    Module colorprint
+    ~~~~~~~~~~~~~~
+
+    Python module to print in color using py3k-style print function. It uses
+    funny hack, which allow to create print function instead standard print
+    routine and give it some "black" magic.
+
+    Print function is like imported for __future__, but has three additional
+    parameters: color (foreground of text output), background (it's background)
+    and format (bold, blink and so on).
+
+    You can read more at __future__.print_function documentation.
+
+    Usage example
+    -------------
+
+        >>> from __future__ import print_function
+        >>> from colorprint import *
+
+        >>> print('Hello', 'world', color='blue', end='', sep=', ')
+        >>> print('!', color='red', format=['bold', 'blink'])
+        Hello, world!
+        ^-- blue    ^-- blinking, bold and red
+
+    :copyright: 2011 Aleksey Rembish
+    :license: BSD
+"""
 from __future__ import print_function
 
 import __builtin__
 import sys
 
-__all__ = ['print', '__version__']
+__all__ = ['print']
+
+__author__ = 'Aleksey Rembish'
+__email__ = 'alex@rembish.ru'
+
+__description__ = 'Python module to print in color using py3k-style print function'
+__url__ = 'https://github.com/don-ramon/colorprint'
+__copyright__ = '(c) 2012 %s' % __author__
+__license__ = 'BSD'
+
 __version__ = '0.1'
 
 _colors = {
