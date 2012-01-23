@@ -24,7 +24,7 @@
         Hello, world!
         ^-- blue    ^-- blinking, bold and red
 
-    :copyright: 2011 Aleksey Rembish
+    :copyright: 2012 Aleksey Rembish
     :license: BSD
 """
 from __future__ import print_function
