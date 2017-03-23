@@ -29,7 +29,12 @@
 """
 from __future__ import print_function
 
-import __builtin__
+try:
+    import __builtin__
+except ImportError:
+    import builtins as __builtin__
+    basestring = str
+
 import sys
 
 __all__ = ['print']
